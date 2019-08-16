@@ -23,7 +23,7 @@ function createItem() {
 
 function checkItem() {
   $('.shopping-list').on('click', '.shopping-item-toggle', function(event){
-    $(event.currentTarget).closest('span').toggleClass('shopping-item__checked');
+    $(event.currentTarget).parent().siblings('span').toggleClass('shopping-item__checked');
   });
 }
 
