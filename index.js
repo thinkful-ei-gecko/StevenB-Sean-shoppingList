@@ -22,12 +22,16 @@ function createItem() {
 
 
 function checkItem() {
-
+  $('.shopping-list').on('click', '.shopping-item-toggle', function(event){
+    $(event.currentTarget).closest('span').toggleClass('shopping-item__checked');
+  });
 }
 
 
 function removeItem() {
-
+  $('.shopping-list').on('click', '.shopping-item-delete', function(event) {
+    $(event.currentTarget).closest('li').remove();
+  });
 }
 
 
